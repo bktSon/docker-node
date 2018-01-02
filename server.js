@@ -8,6 +8,10 @@ const app = express();
 app.get('/', function (req, res){
   res.send('Hello world from Distelli & Docker!');
 });
+app.get('/run', function (req, res){
+    res.send('My name is Son');
+});
+
 
 app.listen(PORT);
 console.log('Running on http://localhost:' + PORT);
