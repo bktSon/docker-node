@@ -1,6 +1,6 @@
-let express = require('express');
-let app = express();
-let isFinishTest = module.exports = {};
+var express = require('express');
+var app = express();
+var isFinishTest = module.exports = {};
 
 app.get('/', function (req, res) {
     res.send('Hello World');
@@ -10,7 +10,7 @@ app.get('/run', function (req, res) {
     res.send('Hello sonbkt');
 });
 
-let server = app.listen(3000, function () {
+var server = app.listen(3000, function () {
     console.log('Magic is happening on port 3000');
 });
 
