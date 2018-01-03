@@ -1,14 +1,20 @@
-FROM alpine:3.1
+FROM node:carbon
 
-# Update
-RUN apk add --update nodejs
+# Create app directory
+WORKDIR /usr/src/app
 
 # Install app dependencies
-COPY package.json /src/package.json
-RUN cd /src; npm install; npm test
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+
+RUN npm install
+RUN npm test
+# If you are building your code for production
+# RUN npm install --only=production
 
 # Bundle app source
-COPY . /src
+COPY . .
 
 EXPOSE 80
-CMD ["node", "/src/server.js"]
+CMD [ "npm", "start" ]
