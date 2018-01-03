@@ -3,7 +3,7 @@ const app = express();
 let isFinishTest = module.exports = {};
 
 app.get('/', function (req, res) {
-    res.send('Hello World !!!');
+    res.send('Hello World');
 });
 
 app.get('/run', function (req, res) {
