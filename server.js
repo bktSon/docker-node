@@ -12,6 +12,10 @@ app.get('/run', function (req, res){
     res.send('My name is Son');
 });
 
+app.get('/play', function (req, res) {
+    res.send('My name is nothings');
+});
+
 
 app.listen(PORT);
 console.log('Running on http://localhost:' + PORT);
