@@ -1,3 +1,5 @@
+"use strict";
+
 var request = require("request");
 var helloWorld = require("../server.js");
 var base_url = "http://localhost:3000/";
