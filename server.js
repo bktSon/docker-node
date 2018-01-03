@@ -1,22 +1,19 @@
-const express = require('express');
+let express = require('express');
+let app = express();
+let isFinishTest = module.exports = {};
 
-// Constants
-const PORT = 8080;
-
-// App
-const app = express();
-app.get('/', function (req, res){
-  res.send('Hello world from Distelli & Docker!');
-});
-app.get('/run', function (req, res){
-    res.send('My name is Son');
+app.get('/', function (req, res) {
+    res.send('Hello World');
 });
 
-app.get('/play', function (req, res) {
-    res.send('My name is nothings');
+app.get('/run', function (req, res) {
+    res.send('Hello sonbkt');
 });
 
+let server = app.listen(3000, function () {
+    console.log('Magic is happening on port 3000');
+});
 
-app.listen(PORT);
-console.log('Running on http://localhost:' + PORT);
-
+isFinishTest.closeServer = function () {
+    server.close();
+};
