@@ -1,8 +1,8 @@
 "use strict";
 
-const request = require("request");
-const helloWorld = require("../server.js");
-const base_url = "http://localhost:3000/";
+let request = require("request");
+let helloWorld = require("../server.js");
+let base_url = "http://localhost:3000/";
 
 describe("Hello World Server", function() {
     describe("GET /", function() {
