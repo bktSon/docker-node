@@ -16,6 +16,10 @@ app.get('/run', (req, res) => {
     res.send('Hello run');
 });
 
+app.get('/start', (req, res) => {
+    res.send('Hello run');
+});
+
 let server = app.listen(PORT);
 
 console.log(`Running on http://localhost:${PORT}`);
